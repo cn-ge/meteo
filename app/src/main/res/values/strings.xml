@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Meto</string>
+    <string name="ok">OK</string>
+    <string name="cancel">CANCEL</string>
+    <string name="main_error_city_empty">Veuillez renseigner une ville</string>
+    <string name="main_error_network_down">Vous devez être connecté</string>
+    <string name="title_activity_maps">Map</string>
+</resources>

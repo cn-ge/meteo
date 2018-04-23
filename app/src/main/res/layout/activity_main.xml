@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="cgeindreau2015.ca.meteo.ui.MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorGrey"
+        android:padding="10dp">
+
+        <EditText
+            android:id="@+id/edit_ville"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="5"
+            android:background="@color/colorWhite"
+            android:gravity="center_horizontal|center_vertical"
+            android:padding="5dp"
+            android:hint="Entrez une ville" />
+
+        <Button
+            android:id="@+id/btn_valider"
+            android:onClick="Valider"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal|center_vertical"
+            android:padding="5dp"
+            android:text="OK"/>
+
+    </LinearLayout>
+
+
+    <com.handmark.pulltorefresh.library.PullToRefreshScrollView
+        xmlns:ptr="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/pull_refresh_scrollview"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        ptr:ptrAnimationStyle="flip"
+        ptr:ptrMode="both" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/text_info"
+                android:text="Dernière"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal|center_vertical"
+                android:padding="10dp"
+                android:textColor="@color/colorAccent"
+                android:background="@color/colorLightGrey"
+                android:textSize="10dp" />
+
+            <TextView
+                android:id="@+id/text_ville"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal|center_vertical"
+                android:padding="10dp"
+                android:textSize="20dp"
+                tools:text="Ville"/>
+            <TextView
+                android:id="@+id/text_degre"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal|center_vertical"
+                android:padding="10dp"
+                android:textSize="15dp"
+                tools:text="Degré"/>
+            <ImageView
+                android:id="@+id/image_meteo"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:gravity="center_horizontal|center_vertical"
+                android:padding="10dp"
+                android:src="@mipmap/ic_launcher"
+                />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal|center_vertical"
+                android:padding="10dp"
+                android:layout_marginTop="30dp"
+                android:textSize="15dp"
+                android:background="@color/colorPrimary"
+                android:text="Voir sur la carte"
+                android:onClick="SeeMap"/>
+
+        </LinearLayout>
+
+    </com.handmark.pulltorefresh.library.PullToRefreshScrollView>
+
+</LinearLayout>
